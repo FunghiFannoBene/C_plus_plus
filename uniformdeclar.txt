@@ -1,0 +1,9 @@
+Yes, the two declarations you mentioned will obtain the same result. The int x{}; declaration will initialize the variable x to the default value of int, 
+which is 0. The int x = 0; declaration will also initialize the variable x to the value 0.
+
+The difference between the two declarations is that the int x{}; declaration is a uniform initialization declaration, while the int x = 0; 
+declaration is an assignment declaration. Uniform initialization declarations are more concise and easier to read than assignment declarations. 
+Additionally, uniform initialization declarations can help to prevent errors, because the compiler will ensure that the variable is initialized to the correct value.
+
+In general, it is recommended to use uniform initialization declarations whenever possible. However, if you need to initialize the variable to
+a specific value other than the default value, then you should use an assignment declaration.
