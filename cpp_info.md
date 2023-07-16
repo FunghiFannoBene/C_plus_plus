@@ -1,6 +1,18 @@
 #CPP
 extension: .cpp 
-compiled : (clang g++ etc..)
+compiled : (clang, g++,(g++-11) etc..) //compiler might not be installed with only sudo apt upgrade gcc || g++. 
+/*
+GCC 11 packages are not available in the default Ubuntu repositories. You can install them from the Ubuntu toolchain repository, but you will need to add the repository first.
+
+To do this, open a terminal and run the following command:
+
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+Then, update your package lists and install the GCC 11 packages:
+
+sudo apt update
+sudo apt install gcc-11 g++-11
+
+*/
 object oriented;
 very fast;
 not easy;
