@@ -1,0 +1,8 @@
+EXIT_SUCCESS and EXIT_FAILURE are preprocessor macros defined in the <cstdlib> header:
+
+#include <cstdlib> // for EXIT_SUCCESS and EXIT_FAILURE
+
+int main()
+{
+    return EXIT_SUCCESS;
+}
