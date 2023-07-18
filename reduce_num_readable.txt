@@ -1,0 +1,10 @@
+In scientific notation, this would be written as 5.9736 x 10²⁴ kg, which is much easier to read. 
+Scientific notation has the added benefit of making it easier to compare the magnitude of two really 
+large or really small numbers simply by comparing the exponent.
+
+Because it can be hard to type or display exponents in C++, we use the letter ‘e’ (or sometimes ‘E’) 
+to represent the “times 10 to the power of” part of the equation. For example, 1.2 x 10⁴ would be written as 1.2e4, 
+and 5.9736 x 10²⁴ would be written as 5.9736e24.
+
+For numbers smaller than 1, the exponent can be negative. The number 5e-2 is equivalent to 5 * 10⁻², which is 
+5 / 10², or 0.05. The mass of an electron is 9.1093822e-31 kg.
