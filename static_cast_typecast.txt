@@ -1,0 +1,12 @@
+static_cast<int>(expression) in C++ serves the same purpose as (int)expression in C, which is to perform a type conversion. However, static_cast is considered safer and more readable, because it makes the programmer's intention more explicit and performs a compile-time check, which helps prevent errors.
+
+It's also worth noting that static_cast in C++ is more versatile than the simple cast in C. static_cast can be used for more than just primitive type conversions; it can also convert pointers to related classes, convert void pointers to typed pointers, and more.
+
+Here's a quick example of static_cast usage:
+
+cpp
+Copy code
+double d = 3.14;
+int i = static_cast<int>(d);  // i becomes 3
+Save to grepper
+This program uses static_cast to convert a double to an int. The fractional part of the double value is truncated, similar to how (int)expression would behave in C.
