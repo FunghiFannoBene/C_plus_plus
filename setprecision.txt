@@ -1,0 +1,5 @@
+3.333333253860474
+3.333333333333334
+Because we set the precision to 16 digits using std::setprecision(), 
+each of the above numbers is printed with 16 digits. But, as you can see, the numbers certainly
+aren’t precise to 16 digits! And because floats are less precise than doubles, the float has more error.
