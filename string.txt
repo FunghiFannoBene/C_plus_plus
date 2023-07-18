@@ -1,0 +1,41 @@
+ std::string name { "Alex" }; // initialize name with string literal "Alex"
+
+ #include <string>
+
+int main()
+{
+    std::string name { "Alex" }; // initialize name with string literal "Alex"
+    name = "John";               // change name to "John"
+
+    return 0;
+}
+
+#include <iostream>
+#include <string> // For std::string and std::getline
+
+int main()
+{
+    std::cout << "Enter your full name: ";
+    std::string name{};
+    std::getline(std::cin >> std::ws, name); // read a full line of text into name
+
+    std::cout << "Enter your favorite color: ";
+    std::string color{};
+    std::getline(std::cin >> std::ws, color); // read a full line of text into color
+
+    std::cout << "Your name is " << name << " and your favorite color is " << color << '\n';
+
+    return 0;
+}
+
+getline(std::cin >> std::ws, var);
+
+ The std::ws input manipulator tells std::cin to ignore any leading whitespace before extraction.
+ Leading whitespace is any whitespace character (spaces, tabs, newlines) that occur at the start of the string.
+
+ If using std::getline() to read strings, use std::cin >> std::ws input manipulator to ignore leading whitespace.
+
+Key insight
+
+Using the extraction operator (>>) with std::cin ignores leading whitespace.
+std::getline() does not ignore leading whitespace unless you use input manipulator std::ws.
