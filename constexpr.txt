@@ -1,0 +1,8 @@
+Any variable that should not be modifiable after initialization and whose initializer is known at compile-time should be 
+declared as constexpr. NOT COMPATIBLE WITH FUNCTIONS THEN!
+Any variable that should not be modifiable after initialization and whose initializer is not known at compile-time 
+should be declared as const.
+
+Caveat: In the future we will discuss some types that are not currently compatible with constexpr 
+(including std::string, std::vector, and other types that use dynamic memory allocation).
+For constant objects of these types, use const instead.
