@@ -1,0 +1,5 @@
+Also note that std::string::length() returns an unsigned integral value (most likely of type size_t). 
+If you want to assign the length to an int variable, you should static_cast it to avoid compiler warnings
+about signed/unsigned conversions:
+
+int length { static_cast<int>(name.length()) };
