@@ -1,0 +1,67 @@
+To use a hexadecimal literal, prefix your literal with 0x.
+
+#include <iostream>
+
+int main()
+{
+    int x{ 0xF }; // 0x before the number means this is hexadecimal
+    std::cout << x << '\n';
+    return 0;
+}
+
+This program prints:
+
+15
+Because there are 16 different values for a hexadecimal digit, we can say that a single hexadecimal 
+  digit encompasses 4 bits. Consequently, 
+a pair of hexadecimal digits can be used to exactly represent a full byte.
+
+
+Consider a 32-bit integer with value 0011 1010 0111 1111 1001 1000 0010 0110. 
+  Because of the length and repetition of digits, that’s not easy to read. In hexadecimal, 
+this same value would be: 3A7F 9826, which is much more concise. For this reason, hexadecimal 
+  values are often used to represent memory addresses or raw data in memory (whose type isn’t known).
+
+To use an octal literal, prefix your literal with a 0 (zero):
+
+#include <iostream>
+
+int main()
+{
+    int x{ 012 }; // 0 before the number means this is octal
+    std::cout << x << '\n';
+    return 0;
+}
+
+In C++14, we can use binary literals by using the 0b prefix:
+
+#include <iostream>
+
+int main()
+{
+    int bin{};        // assume 16-bit ints
+    bin = 0b1;        // assign binary 0000 0000 0000 0001 to the variable
+    bin = 0b11;       // assign binary 0000 0000 0000 0011 to the variable
+    bin = 0b1010;     // assign binary 0000 0000 0000 1010 to the variable
+    bin = 0b11110000; // assign binary 0000 0000 1111 0000 to the variable
+
+    return 0;
+}
+Digit separators
+
+Because long literals can be hard to read, C++14 also adds the ability to use a quotation mark (‘) as a digit separator.
+
+#include <iostream>
+
+int main()
+{
+    int bin { 0b1011'0010 };  // assign binary 1011 0010 to the variable
+    long value { 2'132'673'462 }; // much easier to read than 2132673462
+
+    return 0;
+}
+Also note that the separator can not occur before the first digit of the value:
+
+int bin { 0b'1011'0010 };  // error: ' used before first digit of value
+Digit separators are purely visual and do not impact the literal value in any way.
+
