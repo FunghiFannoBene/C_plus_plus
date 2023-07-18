@@ -29,3 +29,21 @@ int main()
 
     return 0;
 }
+
+
+
+creation
+
+C++
+namespace my_namespace {
+  // code in the namespace
+}
+Utilizza il codice con cautela. Scopri di più
+For example, the following code creates a namespace named my_namespace and defines a function named f() in the namespace:
+
+C++
+namespace my_namespace {
+  void f() {
+    std::cout << "This is function f() in namespace my_namespace\n";
+  }
+}
