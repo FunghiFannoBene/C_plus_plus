@@ -1,3 +1,4 @@
+Favor double over float unless space is at a premium, as the lack of precision in a float will often lead to inaccuracies.
 3.333333253860474
 3.333333333333334
 Because we set the precision to 16 digits using std::setprecision(), 
