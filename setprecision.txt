@@ -4,3 +4,36 @@ Favor double over float unless space is at a premium, as the lack of precision i
 Because we set the precision to 16 digits using std::setprecision(), 
 each of the above numbers is printed with 16 digits. But, as you can see, the numbers certainly
 aren’t precise to 16 digits! And because floats are less precise than doubles, the float has more error.
+
+NaN and Inf
+
+There are two special categories of floating point numbers. The first is Inf, which represents infinity. Inf can be positive or negative. The second is NaN, which stands for “Not a Number”. There are several different kinds of NaN (which we won’t discuss here). NaN and Inf are only available if the compiler uses a specific format (IEEE 754) for floating point numbers. If another format is used, the following code produces undefined behavior.
+
+Here’s a program showing all three:
+
+#include <iostream>
+
+int main()
+{
+    double zero {0.0};
+    double posinf { 5.0 / zero }; // positive infinity
+    std::cout << posinf << '\n';
+
+    double neginf { -5.0 / zero }; // negative infinity
+    std::cout << neginf << '\n';
+
+    double nan { zero / zero }; // not a number (mathematically invalid)
+    std::cout << nan << '\n';
+
+    return 0;
+}
+And the results using Visual Studio 2008 on Windows:
+
+1.#INF
+-1.#INF
+1.#IND
+INF stands for infinity, and IND stands for indeterminate. Note that the results of printing Inf and NaN are platform specific, so your results may vary.
+
+Best practice
+
+Avoid division by 0 altogether, even if your compiler supports it.
