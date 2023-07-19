@@ -18,3 +18,14 @@ int main() {
 
     return 0;
 }
+
+#include <string>
+#include <iostream>
+
+int main() {
+    std::string s = "hello"std::string_literals::s;  // Ora compila correttamente
+
+    std::cout << s << '\n';
+
+    return 0;
+}
