@@ -29,3 +29,21 @@ int main() {
 
     return 0;
 }
+
+#include <string>
+#include <iostream>
+
+void foo() {
+    using namespace std::string_literals; // Valido solo all'interno di questa funzione
+
+    std::string s = "hello"s;
+    std::cout << s << '\n';
+}
+
+int main() {
+    foo();
+
+    std::string s = "world"s;  // Genera un errore di compilazione
+
+    return 0;
+}
