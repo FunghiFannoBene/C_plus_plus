@@ -1,0 +1,20 @@
+#include <string>
+#include <iostream>
+
+int main() {
+    // L'istruzione 'using namespace' ci permette di accedere facilmente agli elementi
+    // definiti nello spazio dei nomi specificato. In questo caso, stiamo utilizzando
+    // 'std::string_literals' che contiene l'operatore letterale 's' per le stringhe.
+    using namespace std::string_literals;
+
+    // Qui, stiamo creando un oggetto std::string chiamato s1. L'operatore letterale 's'
+    // ci permette di creare un letterale std::string direttamente dal letterale di stringa "hello".
+    // Quindi, non stiamo facendo un typecast di una stringa a std::string, stiamo creando
+    // un oggetto std::string dal letterale di stringa.
+    std::string s1 = "hello"s; // HELLO ora è di tipo std::string cioè un oggetto!
+
+    // Qui, stiamo stampando il contenuto della variabile s1, che è "hello".
+    std::cout << s1 << '\n';
+
+    return 0;
+}
