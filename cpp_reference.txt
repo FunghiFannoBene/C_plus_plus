@@ -1,0 +1,51 @@
+reference example
+int b = 5;
+int& a = b;
+int* point_a = &b;
+
+a = 5; b = 5; a non deve essere dereferenziato come un puntatore mentre point_a = &b si!
+
+e questo puo essere usato per passare all'interno di una funzione il valore e non solo il puntatore!
+Una volta inizializzata, una referenza non può essere modificata per riferirsi a un altro oggetto, e 
+  non può nemmeno essere "non inizializzata" o "nullo". Questo riduce la possibilità di errori, 
+  a differenza dei puntatori che possono essere riassegnati, diventare "dangling" (pendenti) o essere nullptr
+
+Utilizzo di Puntatori:
+
+cpp
+Copy code
+std::string s = "ciao";
+char& ref = s[0];        // referenza alla prima lettera
+char* ptr = &s[0];       // puntatore alla prima lettera
+
+std::cout << ref << std::endl;   // stampa 'c'
+std::cout << *ptr << std::endl;  // stampa 'c'
+
+ptr++;  // muove il puntatore alla lettera successiva
+std::cout << *ptr << std::endl;  // stampa 'i'
+Utilizzo dell'Indice:
+
+Se sai quale indice stai utilizzando per la tua referenza, 
+  puoi semplicemente incrementare quell'indice per ottenere la lettera successiva:
+
+cpp
+Copy code
+std::string s = "ciao";
+int indice = 0;
+char& ref = s[indice];
+
+std::cout << ref << std::endl;   // stampa 'c'
+
+indice++;
+char& ref2 = s[indice];
+std::cout << ref2 << std::endl;  // stampa 'i'
+Sull'intera Stringa:
+
+Se vuoi fare riferimento all'intera stringa piuttosto che a singoli caratteri, puoi farlo così:
+
+cpp
+Copy code
+std::string s = "ciao";
+std::string& refStr = s;         // referenza all'intera stringa
+
+std::cout << refStr << std::endl;  // stampa "ciao"
