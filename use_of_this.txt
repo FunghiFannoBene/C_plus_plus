@@ -1,0 +1,23 @@
+Poiché this è un puntatore all'oggetto corrente, si utilizza l'operatore -> per accedere ai suoi membri. 
+  Ecco perché scriviamo this->_name e non this._name.
+
+Per fare un esempio pratico, consideriamo la seguente classe:
+
+cpp
+Copy code
+class Example {
+    int value;
+public:
+    void setValue(int v) {
+        this->value = v;  // usando un puntatore per accedere al membro "value"
+    }
+};
+Save to grepper
+Se avessimo un'istanza di questa classe chiamata obj e volevamo accedere 
+  al membro value direttamente (ipotizzando che fosse pubblico), scriveremmo obj.value.
+
+Ma se avessimo un puntatore all'oggetto, come:
+
+cpp
+Copy code
+Example* ptr = &obj;
