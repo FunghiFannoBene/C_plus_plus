@@ -1,0 +1,6 @@
+In the given function randomChump, you are creating a local object random of type Zombie on the stack. 
+Once the function finishes execution, this local object will go out of scope and be destroyed. 
+  Thus, you can't return a pointer to this local object, as it would be a pointer to memory that's no 
+longer valid (a dangling pointer).
+
+ONLY ALLOCATED OBJECT CAN BE RETURNED.
