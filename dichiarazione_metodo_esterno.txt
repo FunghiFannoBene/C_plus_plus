@@ -1,6 +1,10 @@
 Definizione di funzione fuori dalla dichiarazione di classe:
 
-Sì, quello che stai vedendo è una definizione di funzione membro al di fuori della dichiarazione di classe stessa (probabilmente dichiarata in un file header). In C++, puoi dichiarare una funzione membro all'interno della classe (in un file header, per esempio) e poi definirla all'esterno della classe (spesso in un file sorgente separato). Quando fai ciò, devi usare l'operatore di risoluzione di ambito :: per indicare a quale classe appartiene la funzione.
+Sì, quello che stai vedendo è una definizione di funzione membro al di fuori della dichiarazione di classe stessa (probabilmente
+dichiarata in un file header). In C++, puoi dichiarare una funzione membro all'interno della classe (in un file header, per 
+esempio) e poi definirla all'esterno della classe (spesso in un file sorgente separato). Quando fai ciò, devi usare l'operatore di 
+risoluzione di ambito :: per indicare a quale classe appartiene la funzione.
+
 Ecco un esempio di come potrebbe apparire in pratica:
 
 Zombie.h (file header)
