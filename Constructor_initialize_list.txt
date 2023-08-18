@@ -1,5 +1,8 @@
 Questo si chiama initialize list. E inizializza un costruttore
 
+The names used in the initializer list (_name(name), _weapon(weapon)) don't have to match the parameter names, 
+but using consistent naming can help make the code clearer.
+
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
 {
     return ;
