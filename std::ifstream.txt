@@ -2,6 +2,8 @@ std::ifstream apre un file come fopen. std::ifstream   ifs(FILE);
 is_open = check se il file è aperto con successo;
 getline, (primo parametro si inserisce ifs(o il file std::ifstream), il secondo parametro è il contenitore, il terzo si assegna la condizione di stop... per cui si legge e salva il file fino a quel punto.)
 
+std::ofstream out_file(this->_outFile); crea un file!
+
 
 std::ifstream   ifs(this->_inFile);
     if (ifs.is_open()) {
