@@ -3,6 +3,11 @@ is_open = check se il file è aperto con successo;
 getline, (primo parametro si inserisce ifs(o il file std::ifstream), il secondo parametro è il contenitore, il terzo si assegna la condizione di stop... per cui si legge e salva il file fino a quel punto.)
 
 std::ofstream out_file(this->_outFile); crea un file!
+content.find(toFind); = metodo .find (assegna la posizione iniziale della stringa trovata nel testo content) se non è presente
+assegnera std::string::npos
+
+ content.erase(position, toFind.length()); cancella dalla posizione position per tot di length
+ content.insert(position , replace); inserisce dalla posizione senza sovrascrivere dalla posizione tutta la stringa replace.
 
 
 std::ifstream   ifs(this->_inFile);
