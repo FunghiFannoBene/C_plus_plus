@@ -1,0 +1,16 @@
+static: Dichiarare un membro di classe come statico significa che è condiviso tra tutte le istanze della classe. 
+  Invece che ogni istanza della classe abbia la sua copia della variabile membro, tutte condividono lo stesso dato. 
+  È più efficiente dal punto di vista della memoria se il dato non varia tra gli oggetti individuali.
+
+const: Questa parola chiave indica che il valore della variabile non può essere modificato dopo essere stato inizializzato. 
+  Nel caso di una variabile membro statica, di solito la si inizializza nel punto di dichiarazione o in un file sorgente.
+
+Combinare static e const in questo contesto può essere visto come un metodo per creare una costante a livello di classe: 
+un dato che è condiviso tra tutte le istanze della classe e che non può essere modificato. 
+  È tipicamente utilizzato per dati che sono fondamentali per la classe e che non cambieranno, indipendentemente d
+a quante istanze della classe vengono create o quali operazioni vengono eseguite su di esse.
+
+Nel tuo specifico frammento di codice, _fractionalBits è un valore costante condiviso tra tutte le istanze della classe Fixed. 
+  È probabile che venga utilizzato come parametro per i calcoli interni e non ha bisogno di essere modificato, 
+quindi renderlo const impedisce modifiche accidentali, e renderlo static garantisce che ci sia solo una copia di questo dato, 
+  condivisa tra tutte le istanze della classe.
