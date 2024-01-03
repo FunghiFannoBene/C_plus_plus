@@ -1,0 +1,7 @@
+La dichiarazione forward è necessaria quando hai dipendenze circolari tra le classi 
+o se intendi utilizzare solo puntatori o 
+riferimenti a oggetti di una delle classi nelle dichiarazioni di funzioni in un file di intestazione.
+
+class Bureaucrat;
+class Form;
+perchè una dipende dall'altra quindi bisogna dichiararle
