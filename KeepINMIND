@@ -1,0 +1,29 @@
+constexpr:
+
+Permette di eseguire calcoli a compile-time, migliorando le performance.
+Riduce il runtime overhead.
+noexcept:
+
+Indica che una funzione non lancerà eccezioni.
+Può migliorare le performance in alcune situazioni.
+Principi SOLID:
+
+Single Responsibility: Ogni classe ha una sola responsabilità.
+Open/Closed: Le classi dovrebbero essere aperte per estensioni, ma chiuse per modifiche.
+Liskov Substitution: Le sottoclassi devono essere sostituibili con le loro classi base.
+Interface Segregation: Preferire molte interfacce specifiche piuttosto che una generale.
+Dependency Inversion: Dipendi da astrazioni, non da concretizzazioni.
+Lambda e Funzioni Inline:
+
+Lambda: Funzioni anonime utili per operazioni concise, spesso usate con STL.
+Funzioni Inline: Ridotte dimensioni, integrate direttamente dove vengono chiamate per ridurre overhead della chiamata di funzione.
+std::move e Rvalue References:
+
+std::move: Converte un oggetto in un rvalue reference, permettendo l'assegnazione o la costruzione "move" che è più efficiente della copia.
+Rvalue References: Permettono l'overload di funzioni per operazioni di move.
+Evitare Operazioni Costose (es. I/O):
+
+Riduci accessi a disco e rete.
+Usa caching e lazy loading.
+Ottimizza query e gestione dati.
+
