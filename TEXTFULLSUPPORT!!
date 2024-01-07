@@ -1,1 +1,2 @@
 std::string example = R"delimiter( Questo è un esempio con parentesi tonde (e così via) )delimiter";
+std::string example = R"unique_delimiter( per chiudere una stringa R usare )delimiter)unique_delimiter";
