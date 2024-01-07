@@ -1,3 +1,15 @@
 static dentro la classe, UNISCE e CONDIVIDE I VALORI Con tutte le istanze di classi!!
 se y dichiarato static int y dentreo una classe è cambiato dentro Umano::Antonio viene cambiato anche dentro Umano::Anna!
 essenziamente è piu corretto dire che y in questo caso è Umano::y = any;
+
+constructor special:
+
+class Log
+{
+  public:
+    Log() = delete; //cancello il costruttore default se non mi serve.
+    static void abc()
+    {
+      std::cout << "abc";
+    }
+}
