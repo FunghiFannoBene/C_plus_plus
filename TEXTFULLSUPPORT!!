@@ -1,0 +1,1 @@
+std::string example = R"delimiter( Questo è un esempio con parentesi tonde (e così via) )delimiter";
