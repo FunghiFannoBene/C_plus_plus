@@ -1,0 +1,24 @@
+Sequenze:
+
+std::array: Container di dimensione fissa.
+std::vector: Array dinamico.
+std::deque: Doppia coda, accesso fronte-retro.
+std::list: Lista doppiamente collegata.
+std::forward_list: Lista singolarmente collegata.
+Associativi:
+
+std::set: Insieme ordinato unico.
+std::multiset: Insieme ordinato non unico.
+std::map: Mappa chiave-valore ordinata.
+std::multimap: Mappa chiave-valore ordinata con chiavi duplicate.
+Non ordinati (basati su hash):
+
+std::unordered_set: Insieme non ordinato unico.
+std::unordered_multiset: Insieme non ordinato non unico.
+std::unordered_map: Mappa chiave-valore non ordinata.
+std::unordered_multimap: Mappa chiave-valore non ordinata con chiavi duplicate.
+Adattatori di container:
+
+std::stack: Adatta un container esistente per fornire un'interfaccia LIFO.
+std::queue: Adatta un container esistente per fornire un'interfaccia FIFO.
+std::priority_queue: Coda prioritaria basata su heap.
